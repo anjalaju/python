@@ -1,4 +1,9 @@
-print("Enter your name")
+# print("Enter your name")
 
+# name=input("Enter your name:\n")
+# print("welcome to python class:"+name)
+
+
+print("Hello world")
 name=input("Enter your name:\n")
-print("welcome to python class:"+name)
+print("Your name is: "+name)
