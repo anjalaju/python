@@ -6,4 +6,4 @@ result=x+y
 print("-"*50)
 print("The result is :"+ str(result)) 
 print("-"*50)
-    
+
