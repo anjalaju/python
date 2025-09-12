@@ -1,1 +1,0 @@
-number=int(input("Enter the numbers : "))
