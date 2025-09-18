@@ -1,0 +1,12 @@
+x=input("Enter the file name:")
+f=open(x,"w+")
+f.write("hello\n")
+y=["hai\n","hello\n","welcome\n"]
+f.writelines(y)
+print(f.writable())
+print(f.readable())
+f.seek(0)
+print(f.read())
+f.seek(0)
+print(f.readline())
+f.close()
