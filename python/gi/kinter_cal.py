@@ -1,0 +1,36 @@
+from tkinter import *
+root=Tk()
+root.title("My website")
+def add():
+    num1=Entry1.get()
+    num2=Entry4.get()
+    num1=int(num1)
+    num2=int(num2)
+    result=num1+num2
+    label4.config(text=f"result is : {result}")
+def sub():
+    num3=Entry1.get()
+    num4=Entry4.get()
+    num1=int(num1)
+    num2=int(num2)
+    result=num1-num2
+    label4.config(text=f"result is : {result}")
+
+label1 = Label(root,text="python class",fg="blue",padx=50,pady=50,font=("cambria",20))
+label1.pack(padx=15,pady=15)
+label3 = Label(root,text="first_number",fg="blue",padx=30,pady=30,font=("Arial",10))
+label3.pack()
+Entry1=Entry(root)
+Entry1.pack()
+label2 = Label(root,text="second_number",fg="blue",padx=30,pady=30,font=("Arial",10))
+label2.pack()
+Entry4=Entry(root)
+Entry4.pack()
+butn1=Button(root,text="+",fg="black",width=10,height=1,font=("Arial",10),command=add)
+butn1.pack(padx=20,pady=20)
+butn1=Button(root,text="-",fg="black",width=10,height=1,font=("Arial",10),command=sub)
+butn1.pack(padx=20,pady=20)
+label4 = Label(root,text="Result:",fg="blue",padx=30,pady=30,font=("Arial",10))
+label4.pack()
+root.geometry("400x600")
+root.mainloop()

@@ -3,13 +3,13 @@ connection=mysql.connector.connect(
     host="localhost",
     user="root",
     password="",
-    database="Aju"
+    database="aju"
 )
 cursor=connection.cursor()
 cursor.execute("""
-CREATE TABLE IF NOT EXISTS student(id INTEGER PRIMARY KEY AUTOINCREMENT,
+CREATE TABLE IF NOT EXISTS student(id INT PRIMARY KEY AUTO_INCREMENT,
                name VARCHAR(20)NOT NULL,
-               age INTEGER,
+               age INT,
                gender VARCHAR(10),
                email VARCHAR(50)UNIQUE,
                phone_no VARCHAR(15)UNIQUE,
@@ -18,12 +18,12 @@ CREATE TABLE IF NOT EXISTS student(id INTEGER PRIMARY KEY AUTOINCREMENT,
 
 
 
-# cursor.execute("""  
-# INSERT INTO student(name,age,gender,email,phone_no,address)VALUES
+cursor.execute("""  
+INSERT INTO student(name,age,gender,email,phone_no,address)VALUES
                
-#                ("haris",21,"male","haris@gmail.com","8934678900","abc(H)karkkidamkunnu po")
+               ("Anjal",25,"male","anjal@gmail.com","7994413795","koranath(H)karkkidamkunnu po")
                   
-#  """)
+ """)
 
 # cursor.execute(""" 
 #                 UPDATE student 
@@ -42,5 +42,8 @@ CREATE TABLE IF NOT EXISTS student(id INTEGER PRIMARY KEY AUTOINCREMENT,
 # cursor.execute("""
 # DELETE FROM student WHERE name="An"
 #  """)
+
+connection.commit()
+connection.close()
 
 
