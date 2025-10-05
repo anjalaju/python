@@ -1,7 +1,7 @@
 try:
     x=int(input("Enter a number"))
     y=int(input("Enter a number"))
-    print("sum of numberis:",x/y)
+    print("sum of number is:",x/y)
 except ZeroDivisionError:
     print("cant divide by zero")
 except Exception as e:
