@@ -122,6 +122,10 @@ def  hello():
             entry1.insert(0, str(result))
     except:
             entry1.delete(0,"error")
+def anju():
+     hai=entry1.get().strip()
+     if hai:
+          entry1.delete(len(hai)-1,tk.END)
 btn8 = tk.Button(frame5, text="=", fg="black", width=11, height=2,command=hello)
 btn8.pack(side="left",padx=2,pady=10)    
 frame8= tk.Frame(main)
@@ -129,7 +133,7 @@ frame8.pack()
 frame8.config(bg="black")
 btn7 = tk.Button(frame8, text="C", fg="black", width=11, height=2,command=lambda:entry1.delete(0,tk.END))
 btn7.pack(side="left", padx=2,pady=10)
-btn7 = tk.Button(frame8, text=">", fg="black", width=11, height=2,command=lambda:entry1.delete(0))
+btn7 = tk.Button(frame8, text=">", fg="black", width=11, height=2,command=anju)
 btn7.pack(side="left", padx=2,pady=10)
 main.geometry("400x500")
 main.config(bg="black")
